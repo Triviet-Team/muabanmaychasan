@@ -345,6 +345,7 @@ article {
 
       img {
         transition: .5s;
+        width: 100%;
       }
       a {
         display: block;
@@ -463,7 +464,7 @@ article {
 
 .slider {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   .owl-theme .owl-dots {
     position: absolute;
@@ -528,10 +529,35 @@ article {
     }
   }
 
-  &-zone {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+  .swiper-container {
+    margin: -10px;
+    padding: 10px;
+
+    .swiper-button-prev  {
+      background-image: url('../img/left.png');
+      width: 70px;
+      height: 70px;
+      background-size: cover;
+      left: 0;
+    
+      &:hover {
+        -webkit-filter: brightness(.7);
+                filter: brightness(.7);
+      }
+    }
+    
+    .swiper-button-next {
+      background-image: url('../img/right.png');
+      width: 70px;
+      height: 70px;
+      background-size: cover;
+      right: 0;
+    
+      &:hover {
+        -webkit-filter: brightness(.7);
+                filter: brightness(.7);
+      }
+    }
   }
 
 }
@@ -622,6 +648,157 @@ article {
         }
       }
     } 
+  }
+}
+
+.contact-home {
+  padding: 50px 0;
+  background-image: url('../img/cleaning-washing-cleanup-the-ilo-48889.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+  position: relative;
+  color: white;
+
+  &::before {
+    content: '';
+    background: rgba($color: $main_color, $alpha: .8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  p {
+    font-size: 20px;
+    text-transform: uppercase; 
+  }
+
+  h3 {
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    display: table;
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  h5 {
+    margin-top: 22px;
+
+    a {
+      padding: 12px 20px;
+      background: black;
+      text-transform: uppercase; 
+    }
+  }
+}
+
+.service {
+  margin-bottom: 50px;
+
+  .service-carousel {
+    margin-top: 40px;
+
+    .owl-stage-outer {
+      margin: -20px;
+      padding: 20px;
+    }
+  }
+
+  .owl-theme .owl-nav {
+    button.owl-prev,
+    button.owl-next {
+      position: absolute;
+      top: 47%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      font-size: 70px;
+      -webkit-transition: .3s;
+      transition: .3s;
+      color: black;
+
+      &:hover {
+        color: $main_color;
+        background: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button.owl-prev {
+      left: -15px;
+    }
+
+    button.owl-next {
+      right: -15px;
+    }
+  }
+}
+
+.box-service {
+  @include sha;
+  border-radius: 5px;
+
+  &-img {
+    margin: -15px 15px 15px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+
+    img {
+      border-radius: 5px;
+      transition: .3s;
+    }
+  }
+
+  &-detail {
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    h4 {
+      margin-bottom: 5px;
+
+      a {
+        font-weight: 600;
+        @include o1;
+      }
+    }
+
+    h5 {
+      color: #585858;
+      @include o2;
+    }
+
+    &-btn {
+      margin-top: 30px;
+
+      a {
+        padding: 12px 20px;
+        background: $main_color;
+        color: white;
+        text-transform: uppercase;
+        box-shadow: 0 3px 5px rgba($color: black, $alpha: .2);
+
+        &:hover {
+          box-shadow: 0 0 10px rgba($color: black, $alpha: .3);
+          color: white;
+        }
+      }
+    }
   }
 }
 
@@ -856,10 +1033,19 @@ article {
 .service-page {
   margin-bottom: 20px;
 
-  &.service {
-    background: none;
-    padding: 0;
-    margin: 50px 0;
+  .service-zone {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title-page h3 {
+    font-style: initial;
+    font-size: 24px;
+  }
+
+  .box-service {
+    margin-bottom: 15px;
   }
 }
 
@@ -875,8 +1061,19 @@ article {
     margin-bottom: 20px;
   }
 
+  .title-page h3 {
+    font-style: initial;
+    font-size: 24px;
+  }
+
   .similar {
     margin-top: 80px;
+
+    .service-zone {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     &.service {
       background: none;
@@ -885,22 +1082,6 @@ article {
 
     img {
       margin: 0;
-    }
-  }
-}
-
-.news-page {
-  h2 {
-    margin-bottom: 10px;
-  }
-
-  h4.date {
-    color: $main_color;
-    margin-bottom: 15px;
-    font-weight: 500;
-
-    i {
-      margin-right: 5px;
     }
   }
 }

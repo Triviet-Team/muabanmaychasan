@@ -10,8 +10,66 @@ $('.slider-carousel').owlCarousel({
   autoplaySpeed: 1000,
 });
 
+var swiper = new Swiper('.swiper-product', {
+  slidesPerView: 4,
+  slidesPerColumn: 2,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 4000,
+  },
+  grabCursor: true,
+  disableOnInteraction: true,
+  speed: 1000,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1199: {
+      slidesPerView: 4,
+      slidesPerColumn: 2,
+    },
+    991: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+    },
+    767: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 15,
+    },
+    575: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 15,
+    },
+  },
+});
 
-// XZOOM
+$('.service-carousel').owlCarousel({
+  loop:false,
+  autoplay: false,
+  dots: false,
+  margin:30,
+  nav: true,
+  items: 3,
+  navText: [
+    "<i class='mdi mdi-chevron-left'></i>",
+    "<i class='mdi mdi-chevron-right'></i>" 
+  ],
+  responsive: {
+    0: {
+      items:1,
+    },
+    576: {
+      items:2
+    },
+    768: {
+      items:3
+    },
+  }
+});
+
 $('.xzoom-carousel').owlCarousel({
   loop:false,
   autoplay: false,
