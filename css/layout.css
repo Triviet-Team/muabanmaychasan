@@ -461,6 +461,8 @@ article {
 }
 .menu .main-menu {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: calc(100% - 200px);
   margin: auto;
@@ -584,6 +586,7 @@ article {
   color: #555555;
 }
 .menu .main-menu .search input:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   outline: none;
@@ -598,6 +601,7 @@ article {
   background: none;
   border: 0;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .menu .main-menu .search button:hover {
@@ -607,6 +611,8 @@ article {
 .article-top {
   width: calc(100% - 200px);
   margin: auto !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .article-top .category-home {
@@ -621,6 +627,8 @@ article {
   overflow: hidden;
 }
 .article-top .category-home.active {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .article-top .category-home ul {
@@ -650,6 +658,7 @@ article {
   color: black;
   padding: 0 20px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   line-height: 50px;
 }
@@ -669,6 +678,8 @@ article {
   margin-bottom: 50px;
 }
 .service-bonus .box-service-bonus {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .service-bonus .box-service-bonus img {
@@ -700,11 +711,13 @@ article {
   height: calc(100vw / 2 - 70px);
 }
 .category-mid .category-zone .box-cate {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
   overflow: hidden;
 }
 .category-mid .category-zone .box-cate img {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   width: 100%;
 }
@@ -733,10 +746,12 @@ article {
 }
 .category-mid .category-zone .box-cate a::before {
   left: 0;
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 .category-mid .category-zone .box-cate a::after {
   right: 0;
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 .category-mid .category-zone .box-cate.cate1 {
@@ -759,6 +774,8 @@ article {
   position: relative;
   margin-bottom: 30px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .title-page h3 {
@@ -786,6 +803,7 @@ article {
   background: #49BEB7;
   width: 30px;
   height: 30px;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   right: -70px;
@@ -799,6 +817,7 @@ article {
   background: #49BEB7;
   width: 30px;
   height: 30px;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   left: -70px;
@@ -854,12 +873,14 @@ article {
   padding: 12px 30px;
   font-weight: 600;
   font-size: 14px;
+  -webkit-box-shadow: 0 3px 6px rgba(73, 190, 183, 0.5);
   box-shadow: 0 3px 6px rgba(73, 190, 183, 0.5);
 }
 .product-all a:hover {
   background: #49BEB7;
   color: white;
   border-color: #49BEB7;
+  -webkit-box-shadow: 0 3px 10px rgba(73, 190, 183, 0.6);
   box-shadow: 0 3px 10px rgba(73, 190, 183, 0.6);
 }
 .product .swiper-container {
@@ -1064,10 +1085,12 @@ article {
   overflow: hidden;
 }
 .box-service-img:hover img {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 .box-service-img img {
   border-radius: 5px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .box-service-detail {
@@ -1099,9 +1122,11 @@ article {
   background: #49BEB7;
   color: white;
   text-transform: uppercase;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 .box-service-detail-btn a:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: white;
 }
@@ -1446,6 +1471,8 @@ article {
     display: table;
   }
   .header-top .hotline a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .header-top .hotline i {
@@ -1571,7 +1598,9 @@ article {
     right: 0;
     width: 100%;
     padding: 10px 15px;
+    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     opacity: 0;
     visibility: hidden;
@@ -1581,6 +1610,7 @@ article {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
   }
   .menu .main-menu .search.active {
+    -webkit-transform: none;
     transform: none;
     opacity: 1;
     visibility: initial;

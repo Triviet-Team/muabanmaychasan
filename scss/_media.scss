@@ -172,6 +172,8 @@ $main_color: #49BEB7;
       display: table;
 
       a {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
       }
 
@@ -318,14 +320,17 @@ $main_color: #49BEB7;
         right: 0;
         width: 100%;
         padding: 10px 15px;
-        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+        -webkit-transition: .3s;
         transition: .3s;
         opacity: 0;
         visibility: hidden;
         @include sha;
 
         &.active {
-          transform: none;
+          -webkit-transform: none;
+                  transform: none;
           opacity: 1;
           visibility: initial;
         }
